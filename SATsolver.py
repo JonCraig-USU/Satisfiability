@@ -1,21 +1,25 @@
 
 import random
+
 def makeExp(n):
     # n variables (use 0 ... n-1 for variables, and n .. 2n-1 for their negation
     # we always generate 4.3 * n clauses because for some reason, this ratio
     # generates the hardest problems!
     return [[random.randint(0, 2 * n - 1) for _ in range(3)] for _ in 
 range(int(4.3*n))]
+
 def printSolution(exp, values, solution):
     variableValues = values + [not values[i] for i in range(len(values))]
     print("Solution is " + (" True " if solution else "False"))
     if solution:
         print("Variables = " + ''.join(["T " if values[i] else "F " for i in 
+
 range(len(values))]))
         print("Clauses ")
         for clause in exp:
             print('(' + ''.join(["T " if variableValues[var] else "F " for var in 
 clause]) + ')')
+
 def evalExp(exp, values):
     # append the negated variables at the end
     variableValues = values + [not values[i] for i in range(len(values))]
@@ -25,9 +29,9 @@ def evalExp(exp, values):
         # if not solution: #short circuit evaluation
         #     break
     return solution
+
 def evalClause(clause, variableValues):
-    return variableValues[clause[0]] or variableValues[clause[1]] or 
-variableValues[clause[2]]
+    return variableValues[clause[0]] or variableValues[clause[1]] or variableValues[clause[2]]
 def solveExp(exp, n, values=[]):
     # modified to return both the solution (true or false) and the variable 
 assignments
