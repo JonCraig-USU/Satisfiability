@@ -1,18 +1,18 @@
 # Satisfiability
 Algorithms assignment number 9
 
-[ ] (5pts) Initial Test :
+[X] (5pts) Initial Test :
 - test sample probs via printSol
 
-[ ] (5pts) Algorithm0 : 
+[X] (5pts) Algorithm0 : 
 - verify no short circuit
 - time study, 25 var max, logT linN
 
-[ ] (5pts) Algorithm1 :
+[X] (5pts) Algorithm1 :
 - shortcut evalExp
 - time study
 
-[ ] (5pts) Algorithm2 :
+[X] (5pts) Algorithm2 :
 - shortcut solveExp
 - time study
 
@@ -32,7 +32,7 @@ Algorithms assignment number 9
 - implement the walkSAT alg correctly
 - number 9 is the code for ^
 
-[ ] (None) Verify :
+[X] (None) Verify :
 - compare the answers of alg3 and walkSAT
 
 [ ] (20pts) Empirical :

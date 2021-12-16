@@ -1,0 +1,5 @@
+algorithm0 = 0.000000 n ^ 12.529
+
+algorithm1 = 0.000000 n ^ 12.363
+
+algorithm2 = 0.000000 n ^ 10.321
