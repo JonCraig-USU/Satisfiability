@@ -33,8 +33,7 @@ def evalExp(exp, values):
 def evalClause(clause, variableValues):
     return variableValues[clause[0]] or variableValues[clause[1]] or variableValues[clause[2]]
 def solveExp(exp, n, values=[]):
-    # modified to return both the solution (true or false) and the variable 
-assignments
+    # modified to return both the solution (true or false) and the variable assignments
     if n == 0:
         return (evalExp(exp, values), values)
     # Early termination strategy
@@ -48,8 +47,7 @@ assignments
     else:
         return (solF, valuesF)
 # def walkSat(exp, n, p, maxFlips):
-#     # exp is the expression, n is how many variables, p is a probability usually 
-set to 0.5,
+#     # exp is the expression, n is how many variables, p is a probability usually set to 0.5,
 #     # maxFlips is an int
 #     values = randomValues(n) #generate a list of random Boolean values
 #     for i in range(0, maxFlips): #number of attempts at finding a solution
